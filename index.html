@@ -53,15 +53,14 @@
     </form>
 </div>
 <script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const name = document.querySelector('[name="name"]').value;
+        const phone = document.querySelector('[name="phone"]').value;
+        const email = document.querySelector('[name="email"]').value;
+        const unit = document.querySelector('[name="unit"]').value;
 
-    const name = document.querySelector('[name="name"]').value;
-    const phone = document.querySelector('[name="phone"]').value;
-    const email = document.querySelector('[name="email"]').value;
-    const unit = document.querySelector('[name="unit"]').value;
-
-    const message = `New Contact
+        const message = `New Contact
 
 Name: ${name}
 Phone: ${phone}

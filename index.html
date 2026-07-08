@@ -89,7 +89,7 @@
         ${notes};
         
         window.open(
-                `https://wa.me/201094768362?text=${encodeURIComponent(message)}`,
+                `https://wa.me/201094768362?text='+{encodeURIComponent(message)}`,
                 "_blank"
             );
     });

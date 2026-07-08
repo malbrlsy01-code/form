@@ -67,7 +67,7 @@
     const end = document.querySelector('[name="end"]').value;
     const notes = document.querySelector('[name="notes"]').value;
 
-    const message = 📋 نموذج بيانات موظف
+    const message = `📋 نموذج بيانات موظف
         👤 الاسم: ${name}
         
         🏢 القسم: ${department}
@@ -86,10 +86,10 @@
         🕕 وقت الانتهاء: ${end}
         
         📌 ملاحظات:
-        ${notes};
+        ${notes};`
         
-        window.open(
-                `https://wa.me/201094768362?text='+{encodeURIComponent(message)}`,
+            window.open(
+                `https://wa.me/201094768362?text=${encodeURIComponent(message)}`,
                 "_blank"
             );
     });

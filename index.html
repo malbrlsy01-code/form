@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج بيانات الموظف</title>
+    <link rel="stylesheet" href="kh.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>نموذج بيانات الموظف</h2>
+
+    <form>
+        <label>الاسم</label>
+        <input type="text" name="name" required>
+
+        <label>القسم</label>
+        <input type="text" name="department">
+
+        <label>التخصص</label>
+        <input type="text" name="specialization">
+
+        <label>المدير المباشر</label>
+        <input type="text" name="manager">
+
+        <label>المهمة</label>
+        <textarea name="task" rows="3"></textarea>
+
+        <label>توقيت العمل</label>
+        <select name="shift">
+            <option>صباحي</option>
+            <option>مسائي</option>
+            <option>ليلي</option>
+        </select>
+
+        <div class="row">
+            <div>
+                <label>البدء</label>
+                <input type="time" name="start">
+            </div>
+
+            <div>
+                <label>الانتهاء</label>
+                <input type="time" name="end">
+            </div>
+        </div>
+
+        <label>ملاحظات</label>
+        <textarea name="notes" rows="4"></textarea>
+
+        <button type="submit">إرسال</button>
+    </form>
+</div>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.querySelector('[name="name"]').value;
+    const phone = document.querySelector('[name="phone"]').value;
+    const email = document.querySelector('[name="email"]').value;
+    const unit = document.querySelector('[name="unit"]').value;
+
+    const message = `New Contact
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Unit Type: ${unit}`;
+
+    window.open(
+        `https://wa.me/201094768362?text=${encodeURIComponent(message)}`,
+        "_blank"
+    );
+});
+</script>
+</body>
+</html>
